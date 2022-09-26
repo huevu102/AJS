@@ -8,11 +8,14 @@
   </aside>
   <div class="content col">
     <div class="row">
-      <div *ngFor="let n of list" class="card col-4">
-        <img src="{{n.image}}" class="card-img-top"/>
-        <div class="card-body">
-          <p class="card-text" style="text-align: center; font-weight: bold">{{n.name}}</p>
-          <p class="card-text" style="text-align: center">{{n.price}} VND</p>
+      <div *ngFor="let f of foods" class="col-3">
+        <div class="card">
+          <img src="{{f.image}}" class="card-img-top"/>
+          <div class="card-body">
+            <p>{{f.name}}</p>
+            <p>{{f.description}}</p>
+            <p><span class="text-danger">{{f.price}} VND</span></p>
+          </div>
         </div>
       </div>
     </div>

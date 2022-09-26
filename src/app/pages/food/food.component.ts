@@ -1,6 +1,7 @@
 import {Component} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {IFoodMenu, Ilist, IFoodDetails, IMenu} from "../../interfaces/foodmenu.interface";
+import {IFoodMenu, IMenu} from "../../interfaces/foodmenu.interface";
+import {IFood} from "../../interfaces/food.interface";
 
 @Component({
   selector: 'app-food',
@@ -8,8 +9,9 @@ import {IFoodMenu, Ilist, IFoodDetails, IMenu} from "../../interfaces/foodmenu.i
 })
 
 export class FoodComponent {
+  // Khai báo biến
   data: IMenu[] = [];
-  list: Ilist[] = [];
+  foods: IFood[] = [];
 
   //Tìm cách lấy dữ liệu từ api rồi cho vào biến data
   constructor(private http: HttpClient) {
@@ -22,8 +24,8 @@ export class FoodComponent {
       this.data = data.data;
     });
     const url1 = 'https://foodgroup.herokuapp.com/api/today-special';
-    this.http.get<IFoodDetails>(url1).subscribe(value => {
-      this.list = value.data;
+    this.http.get<{data:IFood[]}>(url1).subscribe(data => {
+      this.foods = data.data;
     });
   }
 }
