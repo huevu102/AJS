@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-body">
+    <h1>Home Page</h1>
+    <h1>{{student.name}}</h1>
+    <p class="text-danger">{{student.address}}</p>
+    <p *ngIf="student.age >=18" class="text-info">{{student.age}}</p>
+    <p *ngIf="student.age <18" class="text-warning">{{student.age}}</p>
+
+    <p *ngFor="let n of arrayNumber">
+      <!--*ngFor="let n of arrayNumber; let i = index"-->
+      <!--2 cách duyệt mảng ↑-->
+      {{n}} - Hello!!
+    </p>
+
+    <ul>
+      <li *ngFor="let name of stringArray">{{name}}</li>
+    </ul>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of ls">
+          <td>{{student.id}}</td>
+          <td>{{student.name}}</td>
+          <td>{{student.age}}</td>
+          <td>{{student.address}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

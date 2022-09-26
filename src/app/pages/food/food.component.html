@@ -1,0 +1,20 @@
+<div class="row">
+  <aside class="aside col-3">
+    <ul>
+      <li *ngFor="let m of data">
+        {{m.name}}
+      </li>
+    </ul>
+  </aside>
+  <div class="content col">
+    <div class="row">
+      <div *ngFor="let n of list" class="card col-4">
+        <img src="{{n.image}}" class="card-img-top"/>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center; font-weight: bold">{{n.name}}</p>
+          <p class="card-text" style="text-align: center">{{n.price}} VND</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
