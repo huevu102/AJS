@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="card col-4" *ngfor="let t of data">
+        <div class="card-body">
+            <p class="card-text">{{t.dt_txt}}</p>
+            <div class="col-2">
+                <p class="card-title">{{t.main.temp}}</p>
+                <p class="card-body">{{t.weather[0].description}}</p>
+            </div>
+            <div class="col-2">
+                <img src="https://openweathermap.org/img/wn/{{t.weather[0].icon}}@2x.png{{}}" />
+            </div>
+        </div>
+    </div>
+</div>

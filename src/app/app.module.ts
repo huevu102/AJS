@@ -13,6 +13,7 @@ import {ContactComponent} from "./pages/contact/contact.component";
 import {RegisterComponent} from "./pages/register/register.component";
 import {FoodComponent} from "./pages/food/food.component";
 import {HttpClientModule} from "@angular/common/http";
+import {WeatherComponent} from "./pages/weather/weather.component";
 
 //Khai báo các duong dan page trong website
 const appRoutes: Routes = [
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'food', component: FoodComponent}
+  {path: 'food', component: FoodComponent},
+  {path: 'weather', component: WeatherComponent}
 ]
 
 @NgModule({
@@ -35,7 +37,8 @@ const appRoutes: Routes = [
     AboutUsComponent,
     ContactComponent,
     RegisterComponent,
-    FoodComponent
+    FoodComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule, FormsModule,
