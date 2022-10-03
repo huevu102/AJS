@@ -1,0 +1,16 @@
+content .row {
+    background-image: url("../../../assets/img/weather-forecast.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
+    margin-top: 30px;
+    background-color: steelblue;
+    color: #fafafa;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+}

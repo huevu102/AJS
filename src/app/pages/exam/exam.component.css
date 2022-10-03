@@ -1,0 +1,55 @@
+.card {
+    padding: 20px;
+    border: none;
+}
+
+h6 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li button {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: blue;
+    background-color: white;
+}
+
+li button:hover {
+    color: grey;
+    background-color: white;
+    border-top: 1px solid darkgrey;
+    border-left: 1px solid darkgrey;
+    border-right: 1px solid darkgray;
+    border-bottom: none;
+}
+
+button {
+    border: none;
+}
+
+.sp-btn {
+    color: grey;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+.title {
+    color: grey;
+}

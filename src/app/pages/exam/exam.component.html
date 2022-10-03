@@ -1,0 +1,44 @@
+<div class="info">
+    <ul>
+        <li *ngFor="let person of people">
+            <button [class.selected]="person === selectedPerson" type="button" (click)="onSelect(person)" class="active">{{person.city}} <span class="sp-btn">x</span></button>
+        </li>
+    </ul>
+
+    <div class="card col">
+        <h6>Employee Info</h6>
+        <div *ngIf="selectedPerson">
+            <div class="person1 row">
+                <div class="col-1">
+                    <img class="rounded-circle" src="{{selectedPerson.image1}}"/>
+                </div>
+                <div class="col-11">
+                    <span>{{selectedPerson.name1}}</span><br>
+                    <span class="title">{{selectedPerson.title1}}</span>
+                </div>
+            </div>
+            <hr>
+            <div class="person2 row">
+                <div class="col-1">
+                    <img class="rounded-circle" src="{{selectedPerson.image2}}"/>
+                </div>
+
+                <div class="col-11">
+                    <span>{{selectedPerson.name2}}</span><br>
+                    <span class="title">{{selectedPerson.title2}}</span>
+                </div>
+            </div>
+            <hr>
+            <div class="person3 row">
+                <div class="col-1">
+                    <img class="rounded-circle" src="{{selectedPerson.image3}}"/>
+                </div>
+                <div class="col-11">
+                    <span>{{selectedPerson.name3}}</span><br>
+                    <span class="title">{{selectedPerson.title3}}</span>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
